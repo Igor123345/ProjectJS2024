@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кола</title>
+    <title>Емоджі</title>
     <style>
         .container{
             background-color: rgb(53, 53, 53);
             border-radius: 5px;
             padding: 40px 60px;
-            width: 1400px;
-            border: #070707;
+            width: 450px;
+            
         margin-top: 100px;
         font-size: 25px;
         color: #ead9d9;
@@ -102,73 +102,57 @@ span{
 
 </head>
 <body>
-    <script>
-        function co() {
-            let c = document.getElementById("myCanvas");
-            let cxt = c.getContext("2d");
-    
-            let rect = +document.co.a.value;
-    
-            for (let count = 0; count < rect; count++) {
-                let x = Math.floor(Math.random() * c.width);
-                let y = Math.floor(Math.random() * c.height);
-                let radius = Math.floor(50 + Math.random() * 150);
-    
-                let red = Math.floor(Math.random() * 256);
-                let green = Math.floor(Math.random() * 256);
-                let blue = Math.floor(Math.random() * 256);
-    
-                // Випадкова прозорість між 0.2 та 0.8
-                let alpha = 0.2 + Math.random() * 0.6;
-    
-                // Формування рядка стилю для кольору та прозорості
-                let color = `rgba(${red}, ${green}, ${blue}, ${alpha})`;
-    
-                cxt.fillStyle = color;
-                cxt.strokeStyle = color;
-                cxt.lineWidth = 6;
-                cxt.lineJoin = "round";
-    
-                cxt.beginPath();
-                cxt.arc(x + radius, y + radius, radius, 0, 2 * Math.PI);
-                cxt.stroke();
-                cxt.fill();
+  <script>
+    function displayEmoji() {
+        let answer = document.getElementById("answer");
+        let min = parseInt(document.emojiForm.a.value);
+        let max = parseInt(document.emojiForm.b.value);
+        let result = '';
+
+        if (!isNaN(min) && !isNaN(max)) {
+            while (min <= max) {
+                let emojiCode = `&#${min};`;
+                let emojiChar = String.fromCodePoint(min);
+
+                result += `${emojiCode} - &amp;#${min}<br>`;
+                min++;
             }
+
+            answer.innerHTML = result;
+        } else {
+            answer.innerHTML = 'Введіть коректні числа';
         }
-    </script>
-    
-    
-    
-        
-    <center>
+    }
+</script>
+
+<center>
     <div class="container">
-       <center><p><b>Кола</b></p></center>
-<form name="co" action="javascript:co()">
+        <center><p><b>Емоджі з кодом</b></p></center>
+        <form name="emojiForm">
 
-    <p style="margin-bottom: -20px;">Введіть кількість кіл</p>
-    <br>
+            <p style="margin-bottom: -20px;">введіть мінімальний номер</p>
+            <br>
 
+            <input class="side" name="a" type="text" value="" size="4">
+            <br>
 
-    <input class="side" name="a" type="text" value="" size="4">
-    <input class="btn" type="submit" value="OK">
-    <input class="btn" type="reset" name="reset" value="Скинути">
-    <br>
+            <p style="margin-bottom: -20px;">введіть максимальний номер</p>
+            <br>
 
+            <input class="side" name="b" type="text" value="" size="4">
+            <br>
 
-
-    <canvas id="myCanvas" width="1200" height="1200"
-    style="border:1px solid #d3d3d3;">
-    Your browser does not support the HTML5 canvas tag.</canvas>
-
-
-
-
-
-    <span id="answer"></span>
-</form>
+            <input class="btn" type="button" value="OK" onclick="displayEmoji()">
+            <input class="btn" type="reset" name="reset" value="Скинути">
+            <br>
+            <span id="answer"></span>
+        </form>
+    </div>
+</center>
 
 
 
-    </div></center>
+
+
 </body>
 </html>
