@@ -1,0 +1,164 @@
+body { /*стилі для тега body*/
+  font-family: Comic Scans,sans-serif;
+  /*background-color: #030b26;*/
+  background-size: contain;
+  background-color: #43ff63;
+}
+
+header { /*шапка*/
+  padding: 5px;
+  background-color: #2e2e2e; /*колір фону*/  
+  height: 200px;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-position: center;
+  border-radius: 35px;
+  border: 5px solid black;
+
+
+}
+
+nav {  /*меню зліва*/
+  display: inline-block;
+  width: 20%;
+  /* background-color: #6F8E22; /*колір фону*/   
+  height: 250px; 
+
+}
+
+section { /*головна частина сайту*/
+  margin: 5px;
+  padding: 10px;
+  background-color: #000000; /*колір фону*/   
+  display: inline-block;
+  vertical-align: top;
+  width: 77%;
+  border-radius: 15px;
+}
+
+article { /*стаття*/
+  margin: 5px;
+  padding: 10px;
+  background-color: #191919;  /*колір фону*/    
+  height: 350px; 
+  color: white;
+  border-radius: 15px;
+}
+
+footer { /*підвал*/
+  padding: 10px;
+  
+  background: #191919; /*колір фону*/   
+  height: 80px;
+  text-align: center;
+  color: gray;
+  border-radius: 15px;
+  border: 3px solid #000000;
+}
+img{
+    border: 3px solid #000505;
+    border-radius: 5px;
+    
+}
+
+/*Вертикальне меню */
+.vertical-menu {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    padding:50 px;
+    
+}
+
+.vertical-menu a { /*пункт не обрано*/
+    background-color: #9bfd9b; /*колір фону */
+    color: rgb(18, 18, 18);  /*колір тексту*/
+    display: block;
+    
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid #242424;
+    font-size: 25px;
+}
+
+.vertical-menu a:hover {/*навели мишку */
+    background-color: rgb(17, 109, 17);  /*колір фону*/
+     color: white  /*колір тексту*/
+}
+
+.vertical-menu a.active {/*пункт обрано*/
+    background-color:rgb(66, 223, 66); /*колір фону*/
+    color: white;/*колір тексту*/
+}
+/*Вертикальне меню - кінець*/
+
+
+/*Головна картинка */
+.header_img img {
+   height: 200px;
+   display: inline-block;
+   
+}
+
+.header_img h1 {
+    display: inline-block;
+    vertical-align: center;
+    color:black; /*колір тексту*/
+    font-size: 42pt; /*розмір тексту*/
+    border-radius: 15px;
+    
+}
+
+.ht1 { /*стаття*/
+  margin: 5px;
+  padding: 10px;
+  background-color: #191919;  /*колір фону*/    
+  height: 200px; 
+  color: white;
+  border-radius: 15px;
+}
+.ht2 { /*стаття*/
+  margin: 5px;
+  padding: 10px;
+  background-color:#191919;  /*колір фону*/    
+  height: 500px; 
+  color: white;
+  border-radius: 15px;
+}
+
+
+
+
+h1{
+  color: #e0e0e0;  
+  font: 40px Georgia;  
+  margin-bottom: 50px;
+  text-align: center;
+  
+
+}
+
+h3{
+    color: white;
+    background-color: black;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+    
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.vertical-menu a {
+  padding: 5px;
+}
+
+p{
+
+  font-size: 20px;
+}
+
