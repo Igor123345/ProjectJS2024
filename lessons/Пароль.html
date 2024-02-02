@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пароль</title>
+    <style>
+        .container{
+            background-color: rgb(53, 53, 53);
+            border-radius: 5px;
+            padding: 40px 60px;
+            width: 600px;
+            border: #070707;
+        margin-top: 100px;
+        font-size: 25px;
+        color: #ead9d9;
+        }
+        body{
+            background-color: #4a4a4a;
+        }
+        input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #070707;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #070707;
+    outline: none;
+    background: transparent;}
+
+  
+.btn {
+  appearance: button;
+  background-color:rgba(121, 255, 117, 0.642) ;
+  border: solid transparent;
+  border-radius: 50px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #d0cfcf;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 10px;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 30%;
+}
+
+.btn:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.btn:main,
+.btn:focus {
+  user-select: auto;
+}
+
+.btn:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.btn:disabled {
+  cursor: auto;
+}
+span{
+    margin: 15px;
+}
+
+
+.side{
+    background-color: #d0cfcf;
+}
+    </style>
+
+</head>
+<body>
+    <script>
+let login = prompt("Придумайте свій логін", "Igor");
+let password = prompt("Придумайте свій пароль", "1234");
+
+
+        function co() {
+let answer_login = document.co.a.value;
+
+
+
+if (answer_login == null){
+    alert("Не скасовуйте");
+}
+else if (answer_login == login){
+    let answer_password = document.co.b.value;
+
+
+    if (answer_password == null ){
+        alert("Не скасовуйте");
+    }
+    else if (answer_password == password){
+        alert("Ви успішно ввійшли в свій аккаунт!")
+        document.write("Драстэ!")
+    }
+    else {
+    alert("Ви не правильно ввели пароль!")
+    }
+
+    
+}
+else {
+    alert("Ви не правильно ввели логін!")
+}
+}
+
+
+
+
+        </script>
+        
+    <center>
+    <div class="container">
+       <center><p><b>Вхід в аккаунт</b></p></center>
+<form name="co" action="javascript:co()">
+
+    <p style="margin-bottom: -20px;">Введіть свій логін</p>
+    <br>
+
+
+    <input class="side" name="a" type="text" value="" size="4">
+
+    <p style="margin-bottom: -20px;">Введіть свій пароль</p>
+    <br>
+    <input class="side" name="b" type="text" value="" size="4">
+
+    <input class="btn" type="submit" value="OK">
+    <input class="btn" type="reset" name="reset" value="Скинути">
+    <br>
+    <span id="answer"></span>
+</form>
+
+
+
+    </div></center>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Персонажи</title>
+    <style>
+        .container{
+            background-color: rgb(53, 53, 53);
+            border-radius: 5px;
+            padding: 40px 60px;
+            width: 600px;
+            border: #070707;
+        margin-top: 100px;
+        font-size: 25px;
+        color: #ead9d9;
+        }
+        body{
+            background-color: #4a4a4a;
+        }
+        input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #070707;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #070707;
+    outline: none;
+    background: transparent;}
+
+  
+.btn {
+  appearance: button;
+  background-color: #b1f58c;
+  border: solid transparent;
+  border-radius: 50px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: rgb(49, 49, 49);
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 10px;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 30%;
+}
+
+.btn:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.btn:main,
+.btn:focus {
+  user-select: auto;
+}
+
+.btn:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.btn:disabled {
+  cursor: auto;
+}
+span{
+    margin: 15px;
+}
+
+
+.side{
+    background-color: #d0cfcf;
+}
+    </style>
+
+</head>
+<body>
+    <script>
+          function co() {
+            let answer=document.getElementById("answer");
+            let true_answer = "Майнкрафт";
+            let answer1 = document.co.a.value
+            if (answer1 == null){
+                string ="Не скасовуйте будьласка"
+            }
+            else if (answer1 == true_answer  ){
+                string = "Так ви повністю праві!";
+            }
+            else{
+                string ="Бачу ви не знаєте правильної відповіді! Правильна відповідь: Майнкрафт"
+            }
+
+
+            answer.innerHTML = string
+        }
+
+
+        function bo(){
+            let answer12=document.getElementById("answer12");
+            let spaceYear = document.bo.b.value
+            if (spaceYear == null) {
+                 string ='Не скасовуйте!'
+            } 
+            else if (spaceYear< 1961){
+                string ='Та ні, це щось дуже рано!'
+            }
+            else if (spaceYear > 1961) {
+                string = 'О ні, в цей час вже багато хто політав!' 
+            } 
+
+            else if (spaceYear == 1961)  {
+                 string ='Так, Ваша відповідь правильна!' 
+            }     
+            else{
+                string ="Ви ввели не число"
+            }
+
+
+            answer12.innerHTML = string
+        }
+
+
+
+        function ao(){
+            let answer=document.getElementById("answer3");
+            let true_answer = "Скрудж Макдак";
+            let answer1 = document.ao.с.value
+            if (answer1 == null){
+                string ="Не скасовуйте будьласка"
+            }
+            else if (answer1 == true_answer){
+                string = "Так ви повністю праві!";
+            }
+            else{
+                string ="Бачу ви не знаєте правильної відповіді! Правильна відповідь: Скрудж Макдак"
+            }
+
+
+            answer.innerHTML = string
+        }
+
+
+
+        </script>
+        
+    <center>
+    <div class="container">
+       <center><p><b>Тест на вгадування</b></p></center>
+<form name="co" action="javascript:co()">
+
+    <p style="margin-bottom: -20px;">В якій грі є такий персонаж як "Кріпер"?</p>
+    <br>
+
+
+    <input class="side" name="a" type="text" value="" size="4">
+
+    <span id="answer"></span><br>
+    <input class="btn" type="submit" value="OK">
+    <input class="btn" type="reset" name="reset" value="Скинути">
+</form>
+
+
+
+
+<form name="bo" action="javascript:bo()">
+    
+    <p style="margin-bottom: -20px;">В якому році людина полетіла у космос?</p>
+    <br>
+    <input class="side" name="b" type="text" value="" size="4">
+
+    <span id="answer12"></span><br>
+
+    <input class="btn" type="submit" value="OK">
+    <input class="btn" type="reset" name="reset" value="Скинути">
+</form>
+
+
+
+<form name="ao" action="javascript:ao()">
+    
+    <p style="margin-bottom: -20px;">Як звали найбагачшу качку у світі з мультсеріалу "Качині історії"?</p>
+    <br>
+    <input class="side" name="с" type="text" value="" size="4">
+
+    <span id="answer3"></span><br>
+
+    <input class="btn" type="submit" value="OK">
+    <input class="btn" type="reset" name="reset" value="Скинути">
+</form>
+
+
+
+    </div></center>
+</body>
+</html>

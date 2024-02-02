@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дорослий сайт</title>
+    <style>
+        .container{
+            background-color: rgb(53, 53, 53);
+            border-radius: 5px;
+            padding: 40px 60px;
+            width: 450px;
+            margin-top: 100px;
+            font-size: 25px;
+            color: #ead9d9;
+        }
+        body{
+            background-color: #4a4a4a;
+        }
+        input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #070707;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #070707;
+    outline: none;
+    background: transparent;}
+
+  
+
+span{
+    margin: 15px;
+}
+
+
+.side{
+    background-color: #d0cfcf;
+}
+    </style>
+
+</head>
+<body>
+    <script>
+        function pon(){
+            let year_old = +prompt("Введіть ваш вік");
+            let answer=document.getElementById("answer");
+
+        if ( year_old < 18 || year_old > 35 ){
+            alert('Вибачте ви нам не підходите');
+            string ="Вам заборонено бути на сайті!"
+        }
+        else{
+            alert("По віку ви нам підходите!")
+            string = "Вам дозволено бути на сайті"
+        }  
+        answer.innerHTML = string
+        }
+    
+ 
+    </script>
+        
+    <center>
+    <div class="container">
+       <form name="pon" action="javascript:pon()">
+
+        <input class="btn" type="submit" value="Перевірити вік">
+        <span id="answer"></span>
+
+       </form>
+
+
+
+
+    </div></center>
+</body>
+</html>

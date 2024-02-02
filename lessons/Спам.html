@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анти спам</title>
+    <style>
+        .container{
+            background-color: rgb(53, 53, 53);
+            border-radius: 5px;
+            padding: 40px 60px;
+            width: 450px;
+            border: #070707;
+            margin-top: 100px;
+            font-size: 25px;
+            color: #ead9d9;
+        }
+        body{
+            background-color: #4a4a4a;
+        }
+        input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #070707;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #070707;
+    outline: none;
+    background: transparent;}
+
+  
+.btn {
+  appearance: button;
+  background-color:rgba(121, 255, 117, 0.642) ;
+  border: solid transparent;
+  border-radius: 50px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #d0cfcf;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 10px;
+  padding: 13px 16px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 30%;
+}
+
+.btn:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.btn:main,
+.btn:focus {
+  user-select: auto;
+}
+
+.btn:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.btn:disabled {
+  cursor: auto;
+}
+span{
+    margin: 15px;
+}
+
+
+.side{
+    background-color: #d0cfcf;
+}
+    </style>
+
+</head>
+<body>
+    <script>
+        function antiSpam() {
+            let answer = document.getElementById("answer");
+            let str = document.getElementById("startNumberInput").value;/*Безкоштовно купити гарантію на авто можна тут за посиланням!*/
+
+if (~str.indexOf("безкоштовно")|| ~str.indexOf("гарантія") || ~str.indexOf("Безкоштовно")|| ~str.indexOf("Гарантія")){
+    string = "В тексті знайшло неприпустимі слова! За це вас можуть заблокувати!";
+}
+else{
+    string = "В тексті нічого поганого не було знайдено!";
+}
+answer.innerHTML = string
+}
+
+    </script>
+    
+    <center>
+        <div class="container">
+            <center><p><b>Анти спам</b></p></center>
+            <form>
+                <p style="margin-bottom: -20px;">Введіть будь-який текст для перевірки на наявність слів:"Безкоштовно" і "Гарантія"</p>
+                <br>
+                
+                <input class="side" id="startNumberInput" type="text" value="" size="4" placeholder="текст">
+                
+                <input class="btn" type="button" value="OK" onclick="antiSpam()">
+                <input class="btn" type="reset" name="reset" value="Скинути">
+                <br>
+                <span id="answer"></span>
+            </form>
+        </div>
+    </center>
+    
+    
+</body>
+</html>
